@@ -23,4 +23,25 @@ public class Produto {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    public int getCodigo(){
+        return codigo;
+    }
+
+    public float getPreco(){
+        return preco;
+    }
+
+    public void setPreco(float preco){
+        this.preco = preco;
+    }
+
+    public int getEstoque(){
+        return estoque;
+    }
+
+    public void setEstoque(int estoque){
+        this.estoque = estoque;
+    }
+
 }
