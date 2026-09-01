@@ -15,4 +15,12 @@ public class Produto {
     //Sobrecarga do operador Produto
     public Produto(){ }
 
+    //Getters e Setters
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 }
