@@ -1,6 +1,7 @@
 public class Produto {
 
-    private int codigo;
+    //Constante - tem que ser inicializado
+    private final int codigo;
     private String descricao;
     private float preco;
     private int estoque;
@@ -13,7 +14,9 @@ public class Produto {
         this.estoque = estoque;
     }
     //Sobrecarga do operador Produto
-    public Produto(){ }
+    public Produto(){
+        codigo = 0;
+    }
 
     //Getters e Setters
     public String getDescricao() {
