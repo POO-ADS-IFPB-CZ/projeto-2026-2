@@ -5,7 +5,7 @@ void main() {
     lampada.interruptor();
     System.out.println(lampada.isLigado());
     System.out.println(lampada.getCor());
-    lampada.setCor("Azul");
+    lampada.setCor(Cor.AZUL);
     System.out.println(lampada.getCor());
 
 }

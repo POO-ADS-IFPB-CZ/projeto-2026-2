@@ -1,13 +1,13 @@
 public class Lampada {
 
     private final String tipo;
-    private String cor;
+    private Cor cor;
     private int potencia;
     private boolean ligado;
 
     public Lampada(String tipo){
         this.tipo = tipo;
-        cor = "Branco";
+        cor = Cor.BRANCA;
     }
 
     public void interruptor(){
@@ -18,11 +18,11 @@ public class Lampada {
         return ligado;
     }
 
-    public String getCor(){
+    public Cor getCor(){
         return cor;
     }
 
-    public void setCor(String cor){
+    public void setCor(Cor cor){
         this.cor = cor;
     }
 
