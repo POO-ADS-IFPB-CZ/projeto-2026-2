@@ -1,25 +1,13 @@
 void main() {
 
-    Lampada lampada = new Lampada("LED");
-    System.out.println(lampada.isLigado());
-    System.out.println(lampada.getCor());
-    System.out.println(lampada.getIntensidade());
+    ContaCorrente contaCorrente =
+            new ContaCorrente("Paulo", 1);
+    contaCorrente.depositar(500);
+    ContaCorrente contaCorrente1 =
+            new ContaCorrente("João", 2);
+    contaCorrente.transferir(contaCorrente1, 100);
 
-    lampada.aumentarIntensidade();
-    lampada.aumentarIntensidade();
-    lampada.aumentarIntensidade();
-    lampada.aumentarIntensidade();
-    lampada.aumentarIntensidade();
-    lampada.aumentarIntensidade();
-    lampada.aumentarIntensidade();
-    lampada.aumentarIntensidade();
-    lampada.aumentarIntensidade();
-    lampada.aumentarIntensidade();
-
-    if(lampada.aumentarIntensidade()){
-        System.out.println("Intensidade aumentada");
-    }else{
-        System.out.println("Já está no máximo");
-    }
+    System.out.println(contaCorrente.getSaldo());
+    System.out.println(contaCorrente1.getSaldo());
 
 }

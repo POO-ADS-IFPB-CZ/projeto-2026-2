@@ -28,4 +28,12 @@ public class ContaCorrente {
         return true;
     }
 
+    public boolean transferir(ContaCorrente destino,
+              float valor){
+        if(valor > saldo) return false;
+        sacar(valor);
+        destino.depositar(valor);
+        return true;
+    }
+
 }
