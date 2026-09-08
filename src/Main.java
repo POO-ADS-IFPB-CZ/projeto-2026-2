@@ -1,14 +1,11 @@
 void main() {
 
-    Produto produto = new Produto(1, "Arroz",
-            4.5f, 10);
-    produto.setPreco(5);
-    System.out.println(produto.getCodigo());
-    System.out.println(produto.getDescricao());
-    System.out.println(produto.getPreco());
-    System.out.println(produto.getEstoque());
-    Aluno aluno = new Aluno(202012010001l,
-            "João", "ADS",
-            LocalDate.of(2000,5,25));
+    Lampada lampada = new Lampada("LED");
+    System.out.println(lampada.isLigado());
+    lampada.interruptor();
+    System.out.println(lampada.isLigado());
+    System.out.println(lampada.getCor());
+    lampada.setCor("Azul");
+    System.out.println(lampada.getCor());
 
 }
