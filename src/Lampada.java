@@ -1,5 +1,6 @@
 public class Lampada {
 
+    //TODO: Trocar tipo para enum
     private final String tipo;
     private Cor cor;
     private int intensidade;
