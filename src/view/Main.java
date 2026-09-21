@@ -1,17 +1,12 @@
 void main(){
-    int valores[] = {3,5,8,1,0};
-    String nomes[] = {"João", "Maria", "Pedro", "Ana"};
+    // Array multidimensional
+    int array[][] = {{4,3,1,5},{3,2},{3,2,5,6,1},{3,4,6}};
 
-    for(int i=0;i<valores.length;i++){
-        valores[i]++;
-    }
-
-    for(int i: valores){
-        i++;
-    }
-
-    for(int i:valores){
-        System.out.println(i);
+    for(int i[] : array){
+        for(int j: i){
+            System.out.print(j+ " ");
+        }
+        System.out.println();
     }
 
 }
