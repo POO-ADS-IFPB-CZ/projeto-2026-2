@@ -1,3 +1,5 @@
+package model;
+
 public class Lampada {
 
     //TODO: Trocar tipo para enum

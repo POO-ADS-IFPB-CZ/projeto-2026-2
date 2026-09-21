@@ -1,3 +1,5 @@
+package model;
+
 public class ContaCorrente {
 
     private String titular;

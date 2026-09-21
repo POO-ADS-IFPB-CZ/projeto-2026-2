@@ -1,3 +1,5 @@
+package model;
+
 public class Produto {
 
     //Constante - tem que ser inicializado
@@ -13,7 +15,7 @@ public class Produto {
         this.preco = preco;
         this.estoque = estoque;
     }
-    //Sobrecarga do operador Produto
+    //Sobrecarga do operador model.Produto
     public Produto(){
         codigo = 0;
     }
