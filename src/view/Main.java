@@ -1,11 +1,17 @@
-import model.Cliente;
-import model.Endereco;
-
 void main(){
-    Cliente cliente = new Cliente("111.111.111-01",
-            "João",
-            new Endereco("Rua José Antônio da Silva",
-                300,
-                "58900-000")
-    );
+    int valores[] = {3,5,8,1,0};
+    String nomes[] = {"João", "Maria", "Pedro", "Ana"};
+
+    for(int i=0;i<valores.length;i++){
+        valores[i]++;
+    }
+
+    for(int i: valores){
+        i++;
+    }
+
+    for(int i:valores){
+        System.out.println(i);
+    }
+
 }
