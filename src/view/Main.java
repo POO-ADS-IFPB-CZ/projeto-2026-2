@@ -1,7 +1,10 @@
+import model.Loja;
+
 void main(){
 
-    int array[] = {4,3,1,8,9};
-    Arrays.sort(array);
-    System.out.println(Arrays.binarySearch(array,2));
-    System.out.println(Arrays.toString(array));
+    Loja loja = new Loja("11.111.111/0001-11",
+            "Armazem Paraiba");
+    Loja loja1 = new Loja("22.222.222/0001-22",
+            "Lojão Rio do Peixe");
+
 }

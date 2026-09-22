@@ -4,12 +4,14 @@ public class Loja {
 
     private String cnpj;
     private String nome;
+    private int contClientes;
     private Cliente[] clientes;
     private Produto[] produtos;
 
     public Loja(String cnpj, String nome){
         this.cnpj = cnpj;
         this.nome = nome;
+        contClientes = 0;
         clientes = new Cliente[100];
         produtos = new Produto[100];
     }
@@ -37,4 +39,12 @@ public class Loja {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public boolean adicionarCliente(Cliente cliente){
+        if(contClientes >= clientes.length) return false;
+        clientes[contClientes] = cliente;
+        contClientes++;
+        return true;
+    }
+
 }
