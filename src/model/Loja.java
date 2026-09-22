@@ -8,6 +8,7 @@ public class Loja {
     private String nome;
     private int contClientes;
     private Cliente[] clientes;
+    private int contProdutos;
     private Produto[] produtos;
 
     public Loja(String cnpj, String nome){
@@ -15,6 +16,7 @@ public class Loja {
         this.nome = nome;
         contClientes = 0;
         clientes = new Cliente[100];
+        contProdutos = 0;
         produtos = new Produto[100];
     }
 
@@ -32,7 +34,7 @@ public class Loja {
     }
 
     public Produto[] getProdutos() {
-        return produtos;
+        return Arrays.copyOfRange(produtos, 0, contProdutos);
     }
 
     public void setCnpj(String cnpj) {
@@ -47,6 +49,12 @@ public class Loja {
         if(contClientes >= clientes.length) return false;
         clientes[contClientes] = cliente;
         contClientes++;
+        return true;
+    }
+
+    public boolean adicionarProduto(Produto produto){
+        if(contProdutos >= produtos.length) return false;
+        produtos[contProdutos++] = produto;
         return true;
     }
 
