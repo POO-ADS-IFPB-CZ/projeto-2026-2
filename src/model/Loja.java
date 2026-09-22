@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Arrays;
+
 public class Loja {
 
     private String cnpj;
@@ -25,7 +27,8 @@ public class Loja {
     }
 
     public Cliente[] getClientes() {
-        return clientes;
+        //Retornar apenas a parte que contém clientes
+        return Arrays.copyOfRange(clientes,0, contClientes);
     }
 
     public Produto[] getProdutos() {
