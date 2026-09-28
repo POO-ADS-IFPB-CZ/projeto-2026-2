@@ -1,12 +1,14 @@
 package model;
 
-public class Professor extends Pessoa {
+public class Professor extends Funcionario {
 
     private String disciplina;
     private String formacao;
 
-    public Professor(String cpf, String nome, long matricula, String disciplina, String formacao) {
-        super(cpf,nome,matricula);
+    public Professor(String cpf, String nome, long matricula,
+                     float salario, String disciplina,
+                     String formacao) {
+        super(cpf,nome,matricula, salario);
         this.disciplina = disciplina;
         this.formacao = formacao;
     }
