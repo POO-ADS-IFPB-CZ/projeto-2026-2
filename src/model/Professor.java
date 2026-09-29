@@ -28,4 +28,16 @@ public class Professor extends Funcionario {
     public void setFormacao(String formacao) {
         this.formacao = formacao;
     }
+
+    @Override
+    public float calcularPagamento(){
+        if(formacao.toUpperCase().contains("MESTRADO")){
+            return getSalario()+500;
+        }
+        if(formacao.toUpperCase().contains("DOUTORADO")){
+            return getSalario()+1000;
+        }
+        return getSalario();
+    }
+
 }
