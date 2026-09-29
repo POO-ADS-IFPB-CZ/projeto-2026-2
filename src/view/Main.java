@@ -5,16 +5,17 @@ import model.Tecnico;
 
 void main(){
 
-    Pessoa pessoa = new Professor("111.111.111-01",
-            "João", 123456l, 2000,
-            "POO", "ADS");
-    Funcionario funcionario = new Tecnico("222.222.222-02",
-            "Maria", 1234l, 2000,
-            "Biblioteca");
+    Funcionario funcionario = new Professor(
+            "111.111.111-01", "João",
+            12345l, 2000, "POO",
+            "Doutorado em Computação"
+            );
+    Funcionario funcionario1 = new Tecnico(
+            "222.222.222-02", "Maria",
+            654321l, 2000,
+            "Laboratório de Química");
 
-    if(funcionario instanceof Tecnico){
-        System.out.println(((Tecnico) funcionario).getSetor());
-    }
-
+    System.out.println(funcionario.calcularPagamento());
+    System.out.println(funcionario1.calcularPagamento());
 
 }

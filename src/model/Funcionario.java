@@ -16,4 +16,9 @@ public class Funcionario extends Pessoa{
     public void setSalario(float salario) {
         this.salario = salario;
     }
+
+    public float calcularPagamento(){
+        return salario;
+    }
+
 }
