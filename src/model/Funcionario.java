@@ -1,6 +1,6 @@
 package model;
 
-public class Funcionario extends Pessoa{
+public abstract class Funcionario extends Pessoa{
 
     private float salario;
 
@@ -17,8 +17,6 @@ public class Funcionario extends Pessoa{
         this.salario = salario;
     }
 
-    public float calcularPagamento(){
-        return salario;
-    }
+    public abstract float calcularPagamento();
 
 }

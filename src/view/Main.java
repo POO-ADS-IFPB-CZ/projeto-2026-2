@@ -1,5 +1,4 @@
 import model.Funcionario;
-import model.Pessoa;
 import model.Professor;
 import model.Tecnico;
 
