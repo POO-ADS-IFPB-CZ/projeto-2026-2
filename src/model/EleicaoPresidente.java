@@ -18,6 +18,6 @@ public class EleicaoPresidente extends Eleicao{
             }
         }
         System.out.println("Eleito: "+eleito.getNome()+
-                "Votos: "+maior);
+                ", Votos: "+maior);
     }
 }
