@@ -44,4 +44,18 @@ public class Empresa {
         return total;
     }
 
+    public int contAssalariado(){
+        int total = 0;
+        for(Funcionario funcionario: funcionarios){
+            if(funcionario instanceof Assalariado)
+                total++;
+        }
+        return total;
+    }
+
+    public int contComissionado(){
+        //TODO: Fazer depois...
+        return 0;
+    }
+
 }

@@ -10,9 +10,10 @@ void main(){
         new Assalariado("222.222.222-02", "Maria",
                 3000),
         new Comissionado("333.333.333-03", "José",
-                10000, 10)
+                10000, 10),
+            null
     };
     Empresa empresa = new Empresa("11.111.111/0001-01",
             "Empresa A", funcionarios);
-    System.out.println(empresa.calcularFolha());
+    System.out.println(empresa.contAssalariado());
 }
