@@ -2,13 +2,12 @@ import model.*;
 
 void main(){
 
-    //Chamando o metodo estático
-    PerimetroCalculavel.teste2();
+    Quadrado quadrado = new Quadrado(2);
+    Circulo circulo = new Circulo(3);
 
-    Circulo circulo = new Circulo(2);
-    System.out.println(circulo.calcularArea());
-    System.out.println(circulo.calcularPerimetro());
-    //Metodo default
-    circulo.teste();
+    teste(quadrado);
+}
+
+void teste(Serializable serializable){
 
 }

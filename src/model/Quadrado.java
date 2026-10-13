@@ -1,6 +1,9 @@
 package model;
 
-public class Quadrado implements AreaCalculavel, PerimetroCalculavel {
+import java.io.Serializable;
+
+public class Quadrado implements AreaCalculavel, PerimetroCalculavel,
+        Serializable {
 
     private double lado;
 
