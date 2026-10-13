@@ -25,4 +25,10 @@ public class Circulo implements AreaCalculavel, PerimetroCalculavel {
     public double calcularPerimetro() {
         return 2*Math.PI*raio;
     }
+
+    @Override
+    public void teste(){
+        System.out.println("Teste para circulo");
+    }
+
 }

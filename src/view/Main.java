@@ -1,10 +1,14 @@
-import model.Aviao;
-import model.Passaro;
-import model.Voador;
+import model.*;
 
 void main(){
-    Voador voador = new Aviao("Airbus");
-    Voador voador1 = new Passaro("Bem te vi");
-    voador.voar();
-    voador1.voar();
+
+    //Chamando o metodo estático
+    PerimetroCalculavel.teste2();
+
+    Circulo circulo = new Circulo(2);
+    System.out.println(circulo.calcularArea());
+    System.out.println(circulo.calcularPerimetro());
+    //Metodo default
+    circulo.teste();
+
 }
