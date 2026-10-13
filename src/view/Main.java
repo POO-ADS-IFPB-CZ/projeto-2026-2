@@ -1,19 +1,10 @@
-import model.Assalariado;
-import model.Comissionado;
-import model.Empresa;
-import model.Funcionario;
+import model.Aviao;
+import model.Passaro;
+import model.Voador;
 
 void main(){
-    Funcionario funcionarios[] = {
-        new Assalariado("111.111.111-01", "João",
-                2000),
-        new Assalariado("222.222.222-02", "Maria",
-                3000),
-        new Comissionado("333.333.333-03", "José",
-                10000, 10),
-            null
-    };
-    Empresa empresa = new Empresa("11.111.111/0001-01",
-            "Empresa A", funcionarios);
-    System.out.println(empresa.contAssalariado());
+    Voador voador = new Aviao("Airbus");
+    Voador voador1 = new Passaro("Bem te vi");
+    voador.voar();
+    voador1.voar();
 }
