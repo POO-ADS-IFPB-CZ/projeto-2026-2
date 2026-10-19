@@ -2,12 +2,8 @@ import model.*;
 
 void main(){
 
-    Quadrado quadrado = new Quadrado(2);
-    Circulo circulo = new Circulo(3);
-
-    teste(quadrado);
-}
-
-void teste(Serializable serializable){
+    Produto produto = new Produto(1, "Mouse",
+            30);
+    System.out.println(produto.calcularTributos());
 
 }
