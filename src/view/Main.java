@@ -1,15 +1,25 @@
 import model.Pessoa;
+import model.Produto;
+import model.Supermercado;
+
+import java.sql.Array;
 
 void main(){
 
-    List<Pessoa> pessoas = new LinkedList<>();
-    pessoas.add(
-        new Pessoa("111.111.111-01","João"));
-    pessoas.add(
-        new Pessoa("222.222.222-02","Maria"));
+    Supermercado supermercado = new Supermercado(
+        "11.111.111/00001-01", "Cajazeiras");
+    supermercado.addProduto(
+        new Produto(1, "Arroz",
+            BigDecimal.valueOf(4.5))
+    );
+    supermercado.addProduto(
+        new Produto(1, "Arroz",
+            BigDecimal.valueOf(4.5))
+    );
+    supermercado.addProduto(
+        new Produto(2, "Feijão",
+            BigDecimal.valueOf(7.5)));
 
-    pessoas.remove(
-        new Pessoa("111.111.111-01","João"));
+    System.out.println(supermercado.getProdutos());
 
-    System.out.println(pessoas);
 }
