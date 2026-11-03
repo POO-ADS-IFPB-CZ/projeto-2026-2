@@ -1,14 +1,14 @@
 void main(){
 
-    Stack<String> pilha = new Stack<>();
-    pilha.push("João");
-    pilha.push("Maria");
-    pilha.push("José");
+    Queue<String> fila = new LinkedList<>();
+    fila.offer("João");
+    fila.offer("Maria");
+    fila.offer("José");
 
-    System.out.println("Topo: "+pilha.peek());
+    System.out.println("Primeiro: "+fila.peek());
 
-    while(!pilha.isEmpty()){
-        System.out.println(pilha.pop());
+    while (!fila.isEmpty()){
+        System.out.println(fila.poll());
     }
 
 }
