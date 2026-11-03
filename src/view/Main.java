@@ -1,14 +1,11 @@
-import model.Controlador;
-import model.Ficha;
-import model.Operacao;
+import model.Aluno;
 
 void main(){
 
-    Fila fila = new Fila();
-    fila.adicionar(new Ficha());
-    fila.adicionar(new Ficha());
-    fila.adicionar(new Ficha());
-
-    System.out.println(fila.proximo());
-
+    Set<Aluno> alunos = new TreeSet<>();
+    alunos.add(new Aluno(123,"João"));
+    alunos.add(new Aluno(321,"Maria"));
+    alunos.add(new Aluno(123,"João"));
+    alunos.add(new Aluno(234, "João"));
+    System.out.println(alunos);
 }
