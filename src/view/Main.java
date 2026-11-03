@@ -1,25 +1,14 @@
-import model.Pessoa;
-import model.Produto;
-import model.Supermercado;
-
-import java.sql.Array;
-
 void main(){
 
-    Supermercado supermercado = new Supermercado(
-        "11.111.111/00001-01", "Cajazeiras");
-    supermercado.addProduto(
-        new Produto(1, "Arroz",
-            BigDecimal.valueOf(4.5))
-    );
-    supermercado.addProduto(
-        new Produto(1, "Arroz",
-            BigDecimal.valueOf(4.5))
-    );
-    supermercado.addProduto(
-        new Produto(2, "Feijão",
-            BigDecimal.valueOf(7.5)));
+    Stack<String> pilha = new Stack<>();
+    pilha.push("João");
+    pilha.push("Maria");
+    pilha.push("José");
 
-    System.out.println(supermercado.getProdutos());
+    System.out.println("Topo: "+pilha.peek());
+
+    while(!pilha.isEmpty()){
+        System.out.println(pilha.pop());
+    }
 
 }
