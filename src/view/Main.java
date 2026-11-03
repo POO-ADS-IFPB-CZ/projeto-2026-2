@@ -1,14 +1,14 @@
+import model.Controlador;
+import model.Operacao;
+
 void main(){
 
-    Queue<String> fila = new LinkedList<>();
-    fila.offer("João");
-    fila.offer("Maria");
-    fila.offer("José");
+    Controlador controlador = new Controlador();
+    controlador.add(new Operacao("ADD", "Paulo"));
+    controlador.add(new Operacao("ADD", "Enter"));
+    controlador.add(new Operacao("ADD", "João"));
+    controlador.desfazer();
+    controlador.add(new Operacao("ADD", "Maria"));
 
-    System.out.println("Primeiro: "+fila.peek());
-
-    while (!fila.isEmpty()){
-        System.out.println(fila.poll());
-    }
 
 }
