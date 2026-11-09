@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -17,7 +18,9 @@ public class Biblioteca {
     }
 
     public List<Musica> criarPlaylist(int quantidade){
-
+        List<Musica> playlist = musicas.stream()
+                .limit(10).toList();
+        return playlist;
     }
 
 }
