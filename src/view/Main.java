@@ -10,6 +10,12 @@ void main(){
 
     Collections.sort(pessoas,
             Comparator.comparing(Pessoa::getNome));
+    System.out.println("Ordenados por nome:");
+    System.out.println(pessoas);
+    System.out.println("Ordenados por idade:");
+    //TODO: com lambda, ordenar por idade
+    Collections.sort(pessoas, (o1,o2)->
+            o1.getIdade()-o2.getIdade());
     System.out.println(pessoas);
 
 }
