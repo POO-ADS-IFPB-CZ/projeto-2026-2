@@ -1,4 +1,3 @@
-import model.ComparadorPessoaNome;
 import model.Pessoa;
 
 void main(){
@@ -12,5 +11,12 @@ void main(){
     Collections.sort(pessoas, new ComparadorPessoaNome());
     System.out.println(pessoas);
 
+}
 
+class ComparadorPessoaNome
+        implements Comparator<Pessoa> {
+    @Override
+    public int compare(Pessoa o1, Pessoa o2) {
+        return o1.getNome().compareTo(o2.getNome());
+    }
 }
