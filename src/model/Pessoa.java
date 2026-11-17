@@ -1,23 +1,15 @@
 package model;
 
-import java.util.Objects;
-
 public class Pessoa {
 
-    private String cpf;
     private String nome;
+    private int idade;
 
-    public Pessoa(String cpf, String nome) {
-        this.cpf = cpf;
+    //Construtor, get, set, toString
+
+    public Pessoa(String nome, int idade) {
         this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+        this.idade = idade;
     }
 
     public String getNome() {
@@ -28,22 +20,19 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (!(o instanceof Pessoa pessoa)) return false;
-        return Objects.equals(cpf, pessoa.cpf);
+    public int getIdade() {
+        return idade;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(cpf);
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
     @Override
     public String toString() {
         return "Pessoa{" +
-                "cpf='" + cpf + '\'' +
-                ", nome='" + nome + '\'' +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
                 '}';
     }
 }

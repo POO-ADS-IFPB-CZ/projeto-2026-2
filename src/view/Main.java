@@ -1,19 +1,16 @@
-import model.Biblioteca;
-import model.Musica;
+import model.ComparadorPessoaNome;
+import model.Pessoa;
 
 void main(){
 
-    Biblioteca biblioteca = new Biblioteca();
-    biblioteca.add(new Musica("Zezo",
-            "Decida", 3.5f));
-    biblioteca.add(new Musica("Zezo",
-            "Decida", 3.5f));
-    biblioteca.add(new Musica("Imagine Dragons",
-            "Enemy", 3.34f));
-    biblioteca.add(new Musica("Edson Gomes",
-            "Árvore", 4.3f));
+    List<Pessoa> pessoas = new ArrayList<>();
+    pessoas.add(new Pessoa("João", 20));
+    pessoas.add(new Pessoa("Ana", 22));
+    pessoas.add(new Pessoa("José", 19));
+    System.out.println(pessoas);
 
-    System.out.println(biblioteca
-            .criarPlaylist(2));
+    Collections.sort(pessoas, new ComparadorPessoaNome());
+    System.out.println(pessoas);
+
 
 }
