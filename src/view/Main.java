@@ -1,11 +1,14 @@
 void main(){
 
-    String frase = IO.readln(
-            "Digite uma frase, sem pontuação:");
-    System.out.println(Arrays.stream(frase.toUpperCase()
-                    .split(" "))
-            .distinct()
+    Random random = new Random();
+    List<Integer> numeros =
+            random.ints(30,0,
+            100).boxed().toList();
+
+    //Numeros sem repetição e ordenados
+    numeros.stream()
             .sorted()
-            .toList());
+            .distinct()
+            .forEach(System.out::println);
 
 }
