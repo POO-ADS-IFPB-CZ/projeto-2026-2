@@ -1,14 +1,8 @@
 void main(){
+    metodo();
+    System.out.println("OK2");
+}
 
-    Random random = new Random();
-    List<Integer> numeros =
-            random.ints(30,0,
-            100).boxed().toList();
-
-    //Numeros sem repetição e ordenados
-    numeros.stream()
-            .sorted()
-            .distinct()
-            .forEach(System.out::println);
-
+private void metodo() {
+    System.out.println(10/0);
 }
