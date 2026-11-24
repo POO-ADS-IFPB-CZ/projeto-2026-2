@@ -11,16 +11,15 @@ void main(){
         }
     }
 
-    Pessoa pessoa = new Pessoa("222.222.222-02",
-            "Maria");
-
-    try(BufferedWriter writer = new BufferedWriter(
-            new FileWriter(file, true)
+    try(BufferedReader reader = new BufferedReader(
+            new FileReader(file)
     )){
-        writer.write(pessoa.getCpf());
-        writer.write(",");
-        writer.write(pessoa.getNome());
-        writer.newLine();
+        List<String> linhas = reader.readAllLines();
+        for(String linha : linhas){
+            String dados[] = linha.split(",");
+            Pessoa pessoa = new Pessoa(dados[0],dados[1]);
+            System.out.println(pessoa);
+        }
     }catch (IOException ex){
         System.out.println("Falha ao manipular arquivo");
     }
