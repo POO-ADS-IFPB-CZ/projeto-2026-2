@@ -2,7 +2,7 @@ import model.Pessoa;
 
 void main(){
     //Arquivo de texto
-    File file = new File("aula.txt");
+    File file = new File("aula-binario");
     if(!file.exists()) {
         try {
             file.createNewFile();
@@ -11,16 +11,15 @@ void main(){
         }
     }
 
-    try(BufferedReader reader = new BufferedReader(
-            new FileReader(file)
+    Set<Pessoa> pessoas = new HashSet<>();
+    pessoas.add(new Pessoa("111.111.111-01", "João"));
+    pessoas.add(new Pessoa("222.222.222-02", "Maria"));
+
+    try(ObjectOutputStream out = new ObjectOutputStream(
+            new FileOutputStream(file)
     )){
-        List<String> linhas = reader.readAllLines();
-        for(String linha : linhas){
-            String dados[] = linha.split(",");
-            Pessoa pessoa = new Pessoa(dados[0],dados[1]);
-            System.out.println(pessoa);
-        }
-    }catch (IOException ex){
+        out.writeObject(pessoas);
+    } catch (IOException e) {
         System.out.println("Falha ao manipular arquivo");
     }
 
