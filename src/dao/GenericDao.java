@@ -29,4 +29,23 @@ public class GenericDao <T>{
         return new HashSet<>();
     }
 
+    public boolean create(T objeto) throws IOException,
+            ClassNotFoundException {
+        Set<T> objetos = read();
+        if(objetos.add(objeto)){
+            atualizarArquivo(objetos);
+            return true;
+        }
+        return false;
+    }
+
+    private void atualizarArquivo(Set<T> objetos)
+            throws IOException {
+        try(ObjectOutputStream out = new ObjectOutputStream(
+                new FileOutputStream(file)
+        )){
+            out.writeObject(objetos);
+        }
+    }
+
 }
