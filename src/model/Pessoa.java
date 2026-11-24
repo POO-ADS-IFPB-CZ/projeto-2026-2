@@ -1,15 +1,22 @@
 package model;
 
 public class Pessoa {
-
+    private String cpf;
     private String nome;
-    private int idade;
 
-    //Construtor, get, set, toString
+    //add construtor, get, set, toString
 
-    public Pessoa(String nome, int idade) {
+    public Pessoa(String cpf, String nome) {
+        this.cpf = cpf;
         this.nome = nome;
-        this.idade = idade;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getNome() {
@@ -20,19 +27,11 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
     @Override
     public String toString() {
         return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
+                "cpf='" + cpf + '\'' +
+                ", nome='" + nome + '\'' +
                 '}';
     }
 }
