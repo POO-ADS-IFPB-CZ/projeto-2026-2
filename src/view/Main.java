@@ -11,16 +11,15 @@ void main(){
         }
     }
 
-    Set<Pessoa> pessoas = new HashSet<>();
-    pessoas.add(new Pessoa("111.111.111-01", "João"));
-    pessoas.add(new Pessoa("222.222.222-02", "Maria"));
-
-    try(ObjectOutputStream out = new ObjectOutputStream(
-            new FileOutputStream(file)
+    try(ObjectInputStream in = new ObjectInputStream(
+            new FileInputStream(file)
     )){
-        out.writeObject(pessoas);
+        Set<Pessoa> pessoas = (Set<Pessoa>) in.readObject();
+        System.out.println(pessoas);
     } catch (IOException e) {
         System.out.println("Falha ao manipular arquivo");
+    } catch (ClassNotFoundException e) {
+        System.out.println("Falha na conversão");
     }
 
 
