@@ -1,6 +1,7 @@
 package model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Pessoa implements Serializable {
 
@@ -8,7 +9,7 @@ public class Pessoa implements Serializable {
     private String cpf;
     private String nome;
 
-    //add construtor, get, set, toString
+    //add construtor, get, set, toString, equals, hashCode
 
     public Pessoa(String cpf, String nome) {
         this.cpf = cpf;
@@ -37,5 +38,16 @@ public class Pessoa implements Serializable {
                 "cpf='" + cpf + '\'' +
                 ", nome='" + nome + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Pessoa pessoa)) return false;
+        return Objects.equals(cpf, pessoa.cpf);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(cpf);
     }
 }
